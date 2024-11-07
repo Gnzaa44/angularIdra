@@ -1,0 +1,56 @@
+<div class="table-container">
+<div *ngIf="isLoading" class="main-spinner">
+  <div class="spinner"></div>
+  <p>Cargando productos...</p>
+</div>
+
+<table [class.loading]="isLoading">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Color</th>
+        <th>Capacidad</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>--</td>
+        <td><input [(ngModel)]="newProduct.name" placeholder="Nombre"></td>
+        <td><input [(ngModel)]="newProduct.data.color" placeholder="Color"></td>
+        <td><input [(ngModel)]="newProduct.data.capacity" placeholder="Capacidad"></td>
+        <td><input [(ngModel)]="newProduct.data.price" placeholder="Precio"></td>
+        <td><button (click)="addProduct()"[disabled]="isAddingProduct" class="btn-add"> <span *ngIf="!isAddingProduct">Agregar</span>
+          <div *ngIf="isAddingProduct" class="spinner-small"></div></button></td>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.data?.color || 'N/A' }}</td>
+        <td>{{ product.data?.capacity || 'N/A' }}</td>
+        <td>{{ product.data?.price || 'N/A' }}</td>
+        <td>
+          <button (click)="viewProduct(product)"[disabled]="loadingProductId === product.id || !product.isLocallyAdded" 
+          class="btn-view">Ver</button>
+          <button (click)="deleteProduct(product.id)"[disabled]="loadingProductId === product.id || !product.isLocallyAdded " 
+          class="btn-delete">  <span *ngIf="loadingProductId !== product.id">Eliminar</span>
+          <div *ngIf="loadingProductId === product.id" class="spinner-small"></div>
+        </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+  <div *ngIf="selectedProduct" class="popup">
+    <h2>Editar Producto</h2>
+    <p>ID: {{ selectedProduct.id }}</p>
+    <input [(ngModel)]="selectedProduct.name" placeholder="Nombre">
+    <input [(ngModel)]="selectedProduct.data.color" placeholder="Color">
+    <input [(ngModel)]="selectedProduct.data.capacity" placeholder="Capacidad">
+    <input [(ngModel)]="selectedProduct.data.price" placeholder="Precio">
+    <button (click)="updateProduct()">Guardar</button>
+    <button (click)="cancelEdit()">Cancelar</button>
+  </div>

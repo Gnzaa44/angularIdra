@@ -1,0 +1,161 @@
+/* src/app/components/product-list/product-list.component.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 17px;
+  }
+  
+  thead {
+    text-align: center;
+  }
+  
+  table, th, td {
+    border: 1px solid rgb(99, 97, 97);
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  button {
+    margin: 5px;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000;
+  }
+  
+  input {
+    background: none;
+    margin: 5px;
+    display: block;
+  }
+  /* src/app/components/product-list/product-list.component.css */
+
+/* Estilos existentes... */
+
+/* Contenedor principal */
+.table-container {
+  position: relative;
+  min-height: 200px;
+}
+
+/* Spinner principal */
+.main-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Efecto de carga en la tabla */
+.loading {
+  opacity: 0.6;
+}
+
+/* Spinner grande */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+/* Spinner pequeño */
+.spinner-small {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Estilos de botones */
+button {
+  min-width: 80px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-add {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-view {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Estilos para inputs */
+input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Popup mejorado */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.popup input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.popup button {
+  margin-top: 10px;
+}
