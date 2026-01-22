@@ -39,12 +39,9 @@ src/
 
 
 ---
+Objetivo del proyecto
 
-## ▶️ Ejecución local
+Este repositorio forma parte de mi portfolio y busca demostrar versatilidad en el uso de frameworks frontend, especialmente Angular, complementando otros proyectos desarrollados con distintas tecnologías.
 
-```bash
-git clone https://github.com/Gnzaa44/angularIdra.git
-npm install
-ng serve
 Estructura basada en las recomendaciones oficiales de Angular, favoreciendo la separación de responsabilidades y la escalabilidad:
 
