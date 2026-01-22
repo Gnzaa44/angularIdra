@@ -1,27 +1,50 @@
-# ABMProducts
+# AngularIdra
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+Aplicación web desarrollada con **Angular** que implementa un ABM (Alta, Baja y Modificación) de productos.
 
-## Development server
+El proyecto fue realizado en el marco de la carrera, con el objetivo de aplicar conceptos fundamentales de Angular, organización del código y buenas prácticas en el desarrollo de una Single Page Application (SPA).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ✨ Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Gestión completa de productos (CRUD)
+- Componentes reutilizables
+- Uso de servicios para la lógica de negocio
+- Enrutamiento básico con Angular Router
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Stack tecnológico
 
-## Running unit tests
+- Angular (Angular CLI)
+- TypeScript
+- HTML5
+- CSS
+- Node.js / npm
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 📁 Estructura del proyecto
+Estructura basada en las recomendaciones oficiales de Angular, favoreciendo la separación de responsabilidades y la escalabilidad:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+src/
+├── app/
+│ ├── components/
+│ ├── models/
+│ ├── services/
+│ └── app-routing.module.ts
+├── assets/
+└── environments/
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## ▶️ Ejecución local
+
+```bash
+git clone https://github.com/Gnzaa44/angularIdra.git
+npm install
+ng serve
+Estructura basada en las recomendaciones oficiales de Angular, favoreciendo la separación de responsabilidades y la escalabilidad:
+
